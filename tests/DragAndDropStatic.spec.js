@@ -1,6 +1,6 @@
 const { test, expect } = require('@playwright/test');
 
-test.only('Drag and Drop', async ({ page }) => {
+test('Drag and Drop', async ({ page }) => {
   // Navigate to the page with drag and drop functionality
   await page.goto('https://demo.automationtesting.in/Static.html');
 
