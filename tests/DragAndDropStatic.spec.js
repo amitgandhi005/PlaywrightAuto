@@ -12,9 +12,9 @@ test('Drag and Drop', async ({ page }) => {
 
   // Perform the drag and drop action
   await angular.dragTo(droppable);
-  await page.waitForTimeout(2000);
+  // await page.waitForTimeout(2000);
   await mongo.dragTo(droppable);
-  await page.waitForTimeout(2000);
+  // await page.waitForTimeout(2000);
   await node.dragTo(droppable);
 
 
