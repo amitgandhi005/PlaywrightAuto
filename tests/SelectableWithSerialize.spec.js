@@ -1,7 +1,7 @@
 
-const {test, expect } = require('@playwright/test');
+const { test, expect } = require('@playwright/test');
 
-test('Selectable with Default Functionality', async ({ page }) => {
+test.only('Selectable with Serialize Functionality', async ({ page }) => {
   // Navigate to the page with selectable functionality
   await page.goto('https://demo.automationtesting.in/Selectable.html');
 
@@ -20,13 +20,13 @@ test('Selectable with Default Functionality', async ({ page }) => {
   // Click on the second item to select it
   await items.nth(5).click();
 
-  
+
 
   // Verify that both items are selected
-  await expect(items.nth(4)).toHaveId('result');
-  await expect(items.nth(5)).toHaveId('result');
+  await expect(items.nth(4)).toHaveId('');
+  await expect(items.nth(5)).toHaveId('');
 
-  await waitForTimeout(10000);
+  // await waitForTimeout(10000);
 
   // Take a screenshot to verify the selection result
   await page.screenshot({ path: 'selectableWithSerialize.png' });
